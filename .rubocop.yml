@@ -1,0 +1,10 @@
+inherit_from: .rubocop_todo.yml
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+  
+Style/YodaCondition:
+  Enabled: false
