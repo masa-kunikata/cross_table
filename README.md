@@ -1,28 +1,52 @@
 # CrossTable
 
 Cross tabulation (Pivot table) utility
-
-convert table form data
+to convert table data to a pivot table form.
   
-   *Jobs list table*
-  |lang|os|price|
-  |:---|:---:|--:|
-  |ruby|win |123|
-  |ruby|linux |12|
-  |php|mac |500|
-  |java|win |566|
-  |ruby|win |987|
+<div>
 
-to a pivot table.
+<div style="float:left;">
 
-  *sum of prices - cross tabulation*
-  |  | ruby| php | java |
-  |:---:|--:|--:|--:|
+   *Source (List table)*
+
+  |lang |os     |price|
+  |:--- |:---   |--:|
+  |ruby |win    |123|
+  |ruby |linux  |12|
+  |php  |mac    |270|
+  |java |win    |560|
+  |php  |win    |750|
+  |java |linux  |950|
+  |java |win    |1200|
+  |php  |win    |500|
+  |php  |mac    |10|
+  |java |mac    |566|
+  |ruby |win    |210|
+
+</div>
+
+<div style="float:left;">
+  
+  &nbsp;&gt;&gt;&gt;&gt;&nbsp;
+ 
+</div>
+
+<div style="float:left;">
+
+  *Destination (Pivot table)*
+
+  |    |ruby|php|java|
+  |:---|--:|--:|--:|
   | win| 123 |123|123|
   |linux| 123 |123|123|
   |mac| 123 |123|123|
 
+</div>
 
+</div>
+
+
+<br style="clear: both;"/>
 
 
 ## Installation
