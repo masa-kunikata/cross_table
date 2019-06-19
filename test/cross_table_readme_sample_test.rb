@@ -16,19 +16,19 @@ class CrossTableReadmeSampleTest < Test::Unit::TestCase
     { 'os' => 'mac',   'lang' => 'php',  'price' => 10 },
     { 'os' => 'mac',   'lang' => 'java', 'price' => 566 },
     { 'os' => 'win',   'lang' => 'ruby', 'price' => 210 },
-  ]
+  ].freeze
 
   OS = {
-    'Windows' => ->(r){ r['os'] == 'win' },
-    'GNU/Linux' => ->(r){ r['os'] == 'linux'},
-    'Apple' => ->(r){ r['os'] == 'mac'},
-  }
+    'Windows' => ->(r) { r['os'] == 'win' },
+    'GNU/Linux' => ->(r) { r['os'] == 'linux' },
+    'Apple' => ->(r) { r['os'] == 'mac' },
+  }.freeze
 
   LANG = {
-    'Ruby' => ->(r){ r['lang'] == 'ruby' },
-    'Java' => ->(r){ r['lang'] == 'java'},
-    'PHP' => ->(r){ r['lang'] == 'php'},
-  }
+    'Ruby' => ->(r) { r['lang'] == 'ruby' },
+    'Java' => ->(r) { r['lang'] == 'java' },
+    'PHP' => ->(r) { r['lang'] == 'php' },
+  }.freeze
 
   def test_sums
     cross_tbl = CrossTable.sums_from(

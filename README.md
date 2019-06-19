@@ -128,7 +128,7 @@ cross_tbl = CrossTable.avgs_from(
 
 [Sample data and group_rule setting](test/test_sample.rb)
 
-### Arbitral Property
+### Arbitrary property of grouped records
 
 ```ruby
 require 'cross_table'
@@ -147,6 +147,10 @@ cross_tbl = CrossTable.from(
 [Sample test code of CrossTable.from to get a Minumum value.](test/cross_table_from_test.rb)
 
 [Sample data and group_rule setting](test/test_sample.rb)
+
+### Multiple Keys Grouping
+
+[Sample test code of using multilpe keys.](test/cross_table_multiple_keys_test.rb)
 
 
 ## Development
