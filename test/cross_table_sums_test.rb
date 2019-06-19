@@ -22,4 +22,39 @@ class CrossTableSumsTest < Test::Unit::TestCase
 
     assert_equal(expected, cross_tbl)
   end
+
+  def test_sums_from_xy_titles
+    cross_tbl = CrossTable.sums_from(
+      recs: JOBS, field: :price, group_rules: [PRICE, OS],
+      y_keys: PRICE.keys, x_keys: OS.keys,
+      ret_type: :xy_titles
+    )
+
+    expected = [
+      [nil, :win, :no_win, :all],
+      [:price_high, 850, 3070, 3920],
+      [:price_mid, 210,  1260, 1470],
+      [:price_low, 440,  280,  720],
+      [:total,    1500,  4610, 6110],
+    ]
+
+    assert_equal(expected, cross_tbl)
+  end
+
+  def test_sums_from_data_only
+    cross_tbl = CrossTable.sums_from(
+      recs: JOBS, field: :price, group_rules: [PRICE, OS],
+      y_keys: PRICE.keys, x_keys: OS.keys,
+      ret_type: :data_only
+    )
+
+    expected = [
+      [850,  3070, 3920],
+      [210,  1260, 1470],
+      [440,  280,  720],
+      [1500, 4610, 6110],
+    ]
+
+    assert_equal(expected, cross_tbl)
+  end
 end
