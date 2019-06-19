@@ -1,8 +1,29 @@
 # CrossTable
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cross_table`. To experiment with that code, run `bin/console` for an interactive prompt.
+Cross tabulation (Pivot table) utility
 
-TODO: Delete this and the text above, and describe your gem
+convert table form data
+  
+   *Jobs list table*
+  |lang|os|price|
+  |:---|:---:|--:|
+  |ruby|win |123|
+  |ruby|linux |12|
+  |php|mac |500|
+  |java|win |566|
+  |ruby|win |987|
+
+to a pivot table.
+
+  *sum of prices - cross tabulation*
+  |  | ruby| php | java |
+  |:---:|--:|--:|--:|
+  | win| 123 |123|123|
+  |linux| 123 |123|123|
+  |mac| 123 |123|123|
+
+
+
 
 ## Installation
 
@@ -22,7 +43,17 @@ Or install it yourself as:
 
 ## Usage
 
+```ruby
+require 'cross_table'
 
+cross_tbl = CrossTable.counts_from(
+  recs: [],
+  group_rules: [],
+  y_keys: [],
+  x_keys: []
+)
+
+```
 TODO!!!
 
 
