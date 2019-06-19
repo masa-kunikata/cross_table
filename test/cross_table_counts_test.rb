@@ -13,11 +13,12 @@ class CrossTableCountsTest < Test::Unit::TestCase
       y_keys: PRICE.keys, x_keys: OS.keys
     )
 
-    expected =
-      {:price_high=>{:win=>1, :no_win=>4, :all=>5},
-       :price_mid=>{:win=>1, :no_win=>4, :all=>5},
-       :price_low=>{:win=>4, :no_win=>2, :all=>6},
-       :total=>{:win=>6, :no_win=>10, :all=>16}}
+    expected = {
+      price_high: { win: 1, no_win: 4,  all: 5 },
+      price_mid: {  win: 1, no_win: 4,  all: 5 },
+      price_low: {  win: 4, no_win: 2,  all: 6 },
+      total: {      win: 6, no_win: 10, all: 16 },
+    }
 
     assert_equal(expected, cross_tbl)
   end
@@ -29,12 +30,13 @@ class CrossTableCountsTest < Test::Unit::TestCase
       ret_type: :xy_titles
     )
 
-    expected =
-      [[nil, :win, :no_win, :all],
-       [:price_high, 1, 4, 5],
-       [:price_mid, 1, 4, 5],
-       [:price_low, 4, 2, 6],
-       [:total, 6, 10, 16]]
+    expected = [
+      [nil, :win, :no_win, :all],
+      [:price_high, 1, 4,  5],
+      [:price_mid,  1, 4,  5],
+      [:price_low,  4, 2,  6],
+      [:total,      6, 10, 16]
+    ]
 
     assert_equal(expected, cross_tbl)
   end
@@ -46,7 +48,12 @@ class CrossTableCountsTest < Test::Unit::TestCase
       ret_type: :data_only
     )
 
-    expected = [[1, 4, 5], [1, 4, 5], [4, 2, 6], [6, 10, 16]]
+    expected = [
+      [1, 4, 5],
+      [1, 4, 5],
+      [4, 2, 6],
+      [6, 10, 16]
+    ]
 
     assert_equal(expected, cross_tbl)
   end

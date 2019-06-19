@@ -13,11 +13,12 @@ class CrossTableSumsTest < Test::Unit::TestCase
       y_keys: PRICE.keys, x_keys: OS.keys
     )
 
-    expected =
-      {:price_high=>{:win=>850, :no_win=>3070, :all=>3920},
-       :price_mid=>{:win=>210, :no_win=>1260, :all=>1470},
-       :price_low=>{:win=>440, :no_win=>280, :all=>720},
-       :total=>{:win=>1500, :no_win=>4610, :all=>6110}}
+    expected = {
+      price_high: { win: 850,  no_win: 3070, all: 3920 },
+      price_mid: {  win: 210,  no_win: 1260, all: 1470 },
+      price_low: {  win: 440,  no_win: 280,  all: 720 },
+      total: {      win: 1500, no_win: 4610, all: 6110 },
+    }
 
     assert_equal(expected, cross_tbl)
   end
