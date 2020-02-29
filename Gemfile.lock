@@ -12,7 +12,7 @@ GEM
     parser (2.6.3.0)
       ast (~> 2.4.0)
     rainbow (3.0.0)
-    rake (10.5.0)
+    rake (13.0.1)
     rubocop (0.71.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -24,12 +24,13 @@ GEM
     unicode-display_width (1.6.0)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
   bundler (~> 2.0)
   cross_table!
-  rake (~> 10.0)
+  rake (~> 13.0)
   rubocop
 
 BUNDLED WITH
