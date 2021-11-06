@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cross_table (0.1.0)
+    cross_table (0.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -34,4 +34,4 @@ DEPENDENCIES
   rubocop
 
 BUNDLED WITH
-   2.0.1
+   2.2.22
